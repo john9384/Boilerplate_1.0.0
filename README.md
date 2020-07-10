@@ -1,2 +1,2 @@
-# Boilerplate_1.0.0
-Basic development environment for frontend web dev
+# Boilerplate Server
+A back-end service for a linkedin clone
