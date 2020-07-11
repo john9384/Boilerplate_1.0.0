@@ -2,6 +2,7 @@ import path from "path";
 import webpack from "webpack";
 
 export default {
+    mode: 'development',
     devtool: 'inline-source-map',
     entry: [
         path.resolve(__dirname, 'src/index')
@@ -19,7 +20,8 @@ export default {
     output: {
         path: path.resolve(__dirname, 'src'),
         publicPath: '/',
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        libraryTarget: "umd"
     },
     plugins: [
         new webpack.LoaderOptionsPlugin({
@@ -27,9 +29,12 @@ export default {
         })
     ],
     module: {
-        rules: [
-            { test: /\.js$/, exclude: /node_modules/, loaders: ['babel'] },
+        rules: [{
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loaders: ['babel-loader']
+            },
             { test: /\.css$/, loaders: ['style', 'css'] }
         ]
     },
-}
+};
