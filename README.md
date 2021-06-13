@@ -1,2 +1,3 @@
-# Boilerplate Server
-A back-end service for a linkedin clone
+# Frontend Boilerplate
+A boiler plate for basic frontend web dev. 
+Configured webpack and scss.
